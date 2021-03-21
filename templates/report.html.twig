@@ -1,0 +1,55 @@
+{% extends "main.html.twig" %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-12 mt-5">
+
+			<div class="card">
+				<div class="card-header">
+					<h1>
+                    {{ cardTitle }}
+					</h1>
+				</div>
+				<div class="card-body">
+					<table  id="table-report" class="table table-striped text-center">
+						<thead>
+							<tr>
+                                <th></th>
+                                {% for elevator in headerElevators %}
+                                    <th colspan=2>{{ elevator }}</th>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                            <th> TIME </th>
+                                {% for elevator in headerElevators %}
+                                    <th>Location </th>
+                                    <th> Last Floors Traveled </th>
+                                {% endfor %}
+                            </tr>
+						</thead>
+						<tbody>
+                            {% for time in timeList %}
+                                
+							<tr>
+                                <td data-toggle="tooltip"
+                                 data-placement="top" 
+                                 title="{{ sequenceList[loop.index0] | join('-')}}">
+                                 {{ time | hour }}
+                                </td> 
+                                {% set index = loop.index0 %}
+                                {% for info in report[index] %}
+                                   <td> {{info[1]}}</td> 
+                                   <td> {{info[2]}}</td> 
+                                {% endfor %}
+                                
+                                
+                            </tr>
+                            {% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div class="card-footer"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
