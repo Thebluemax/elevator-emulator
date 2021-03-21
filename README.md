@@ -33,7 +33,7 @@ The file `src/Setting.php` is a example of the configuration data, is file has t
 
 Import the classes and create a intance of TimerThread, for create a array of Sequence instances, can use the factory `Sequence::factorySequencies($data);`. The requied parameters in constructor are number de elevators, number of floors in building and array of sequences.
 
-´´´php
+```php
 use Acme\ControlElevatorBundle\Controller\TimerThread;
 use Acme\ControlElevatorBundle\Model\Sequence;
 // imported classes
@@ -41,12 +41,12 @@ use Acme\ControlElevatorBundle\Model\Sequence;
         $sequences = Sequence::factorySequencies(Setting::$SEQUENCES);
         $thread = new TimerThread(Setting::$ELEVATORS, Setting::$FLOORS, $sequences);
 
-´´´
+```
 To get the report, call `run()` method with the first parameter the initial hour military format ( 09:05 -> 950) and the final hour ni the same format. 
 
-´´´php
+```php
 $report = $thread->run(900, 1530);
-´´´
+```
 ## Roadmap
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
