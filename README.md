@@ -20,8 +20,9 @@ This is a demo application of the the main library of the project, The library i
 
 #### About the software.
 
-The  snapshot information of the elevators, is taken before the sequences are launched. 
-In this version the elevator's name not is not coustomizable.
+- The  snapshot information of the elevators, is taken before the sequences are launched. 
+- In this version the elevator's name not is not coustomizable.
+- For debug purposse, the hour cell in data table, have a tooltip with the number of the sequences launched.
 
 
 
