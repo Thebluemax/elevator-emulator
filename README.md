@@ -2,8 +2,8 @@
 
 ## Overview
 
-This is a simple Building Elevator Usage Emulator. 
-Can be configurate elevators, number of floors end sequencies of use.
+This is a simple Building Elevators Usage Emulator. 
+Can be configured the number of elevators, number of floors end sequencies of use.
 The application return a report of the usage of each elevator each minute.
 
 ## Built With
